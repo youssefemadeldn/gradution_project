@@ -1,11 +1,15 @@
 buildscript {
-    ext.kotlin_version = '1.7.10'
+    // check if ext.kotlin_version >= 1.5.0 
+    // default in this case is 1.7.10 => condition true 
+    ext.kotlin_version = '1.8.10'
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
+        // Using an up-to-date Android gradle build tools version: example
+        classpath 'com.android.tools.build:gradle:8.1.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
