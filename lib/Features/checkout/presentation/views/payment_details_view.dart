@@ -4,6 +4,7 @@ import 'package:flutter_application_1/core/widgets/payment_details_view_body.dar
 
 class PaymentDetailsView extends StatelessWidget {
   const PaymentDetailsView({super.key});
+  static String id = 'PaymentDetailsView';
 
   @override
   Widget build(BuildContext context) {

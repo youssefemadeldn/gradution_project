@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Features/checkout/presentation/views/my_cart_view.dart';
+
+import 'package:flutter_application_1/Features/checkout/presentation/views/payment_details_view.dart';
 
 void main() {
   runApp(const CheckOutApp());
@@ -10,8 +11,11 @@ class CheckOutApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MyCartView(),
+    return MaterialApp(
+      routes: {
+        PaymentDetailsView.id: (context) => PaymentDetailsView(),
+      },
+      initialRoute: PaymentDetailsView.id,
     );
   }
 }

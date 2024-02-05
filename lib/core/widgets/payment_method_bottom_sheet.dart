@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/constant.dart';
 import 'package:flutter_application_1/core/widgets/custom_button.dart';
 import 'package:flutter_application_1/core/widgets/payment_methods_list_view.dart';
 
@@ -19,7 +20,10 @@ class PaymentMethodBottomSheet extends StatelessWidget {
           SizedBox(
             height: 32,
           ),
-          CustomButton(text: 'Continue'),
+          CustomButton(
+            text: 'Continue',
+            color: kPrimaryColor,
+          ),
         ],
       ),
     );

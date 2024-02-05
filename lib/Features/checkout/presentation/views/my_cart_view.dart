@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/constant.dart';
 import 'package:flutter_application_1/core/widgets/custom_app_bar_widget.dart';
 import 'package:flutter_application_1/core/widgets/custom_button.dart';
 import 'package:flutter_application_1/core/widgets/payment_method_bottom_sheet.dart';
@@ -73,6 +74,7 @@ class MyCartView extends StatelessWidget {
                       return const PaymentMethodBottomSheet();
                     });
               },
+              color: kPrimaryColor,
             ),
             const SizedBox(
               height: 20,

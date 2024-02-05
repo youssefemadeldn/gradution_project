@@ -4,10 +4,12 @@ import 'package:flutter_application_1/core/utils/styles.dart';
 class CustomButton extends StatelessWidget {
   final void Function()? onTap;
   final String text;
+  final Color color;
   const CustomButton({
     super.key,
     this.onTap,
     required this.text,
+    required this.color,
   });
 
   @override
@@ -18,7 +20,7 @@ class CustomButton extends StatelessWidget {
         height: 60,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: const Color(0xff34a853),
+          color: color,
           borderRadius: BorderRadius.circular(15),
         ),
         child: Center(
