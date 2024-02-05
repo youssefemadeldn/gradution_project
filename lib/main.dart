@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_application_1/Features/checkout/presentation/views/payment_details_view.dart';
+import 'package:flutter_application_1/views/login_view.dart';
+import 'package:flutter_application_1/views/register_view.dart';
 
 void main() {
   runApp(const CheckOutApp());
@@ -14,8 +16,10 @@ class CheckOutApp extends StatelessWidget {
     return MaterialApp(
       routes: {
         PaymentDetailsView.id: (context) => PaymentDetailsView(),
+        RegisterPage.id: (context) => RegisterPage(),
+        LoginPage.id: (context) => LoginPage(),
       },
-      initialRoute: PaymentDetailsView.id,
+      initialRoute: LoginPage.id,
     );
   }
 }

@@ -3,7 +3,7 @@ import 'package:flutter_application_1/core/utils/styles.dart';
 import 'package:flutter_application_1/core/widgets/card_info_widget.dart';
 import 'package:flutter_application_1/core/widgets/paid_widget.dart';
 import 'package:flutter_application_1/core/widgets/payment_item_info.dart';
-import 'package:flutter_application_1/widgets/total_price_widget.dart';
+import 'package:flutter_application_1/widgets/p_total_price_widget.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
