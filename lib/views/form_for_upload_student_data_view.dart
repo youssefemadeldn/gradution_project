@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant.dart';
-import 'package:flutter_application_1/widgets/body_of_form.dart';
-import 'package:flutter_application_1/widgets/botoom_of_form.dart';
-import 'package:flutter_application_1/widgets/top_of_form.dart';
+import 'package:flutter_application_1/widgets/widgets%20for%20FormForUploadStudentData%20view/body_of_form.dart';
+import 'package:flutter_application_1/widgets/widgets%20for%20FormForUploadStudentData%20view/botoom_of_form.dart';
+import 'package:flutter_application_1/widgets/widgets%20for%20FormForUploadStudentData%20view/top_of_form.dart';
 
 class FormForUploadStudentData extends StatelessWidget {
   const FormForUploadStudentData({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/constant.dart';
-import 'package:flutter_application_1/widgets/avatar.dart';
+
 import 'package:flutter_application_1/widgets/custom_text_form_field.dart';
-import 'package:flutter_application_1/widgets/student_data.dart';
+import 'package:flutter_application_1/widgets/widgets%20for%20FormForUploadStudentData%20view/avatar.dart';
+import 'package:flutter_application_1/widgets/widgets%20for%20FormForUploadStudentData%20view/student_data.dart';
 
 class BodyOfForm extends StatelessWidget {
   const BodyOfForm({
