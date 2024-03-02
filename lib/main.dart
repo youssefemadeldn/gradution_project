@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_application_1/Features/checkout/presentation/views/payment_details_view.dart';
+import 'package:flutter_application_1/views/form_for_upload_student_data_view.dart';
 import 'package:flutter_application_1/views/login_view.dart';
-import 'package:flutter_application_1/views/register_view.dart';
 
 void main() {
   runApp(const CheckOutApp());
@@ -14,10 +14,11 @@ class CheckOutApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       routes: {
         PaymentDetailsView.id: (context) => PaymentDetailsView(),
-        RegisterPage.id: (context) => RegisterPage(),
         LoginPage.id: (context) => LoginPage(),
+        FormForUploadStudentData.id: (context) => FormForUploadStudentData(),
       },
       initialRoute: LoginPage.id,
     );

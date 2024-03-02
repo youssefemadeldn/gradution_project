@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant.dart';
 import 'package:flutter_application_1/core/widgets/custom_button.dart';
-import 'package:flutter_application_1/views/register_view.dart';
+import 'package:flutter_application_1/views/form_for_upload_student_data_view.dart';
 import 'package:flutter_application_1/widgets/custom_text_form_field.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
@@ -87,8 +87,11 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(
                   height: 10,
                 ),
-                const CustomButton(
-                  // onTap: () async {
+                CustomButton(
+                  onTap: () {
+                    Navigator.pushNamed(context, FormForUploadStudentData.id);
+                  },
+                  //() async {
                   //   if (formKey.currentState!.validate()) {
                   //     isLoading = true;
                   //     setState(() {});
@@ -117,28 +120,6 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 const SizedBox(
                   height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(
-                      'dont\'t have an acount? ',
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(context, RegisterPage.id);
-                      },
-                      child: const Text(
-                        'Register',
-                        style: TextStyle(
-                          color: Color(0XFFC7EDE6),
-                        ),
-                      ),
-                    ),
-                  ],
                 ),
               ],
             ),
