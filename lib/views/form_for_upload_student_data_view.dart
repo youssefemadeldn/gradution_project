@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant.dart';
+import 'package:flutter_application_1/widgets/main_appBar.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20FormForUploadStudentData%20view/body_of_form.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20FormForUploadStudentData%20view/botoom_of_form.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20FormForUploadStudentData%20view/top_of_form.dart';
@@ -11,38 +12,7 @@ class FormForUploadStudentData extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: kPrimaryColor,
-        automaticallyImplyLeading: false,
-        title: Row(
-          children: [
-            const Text(
-              'جامعة بنها',
-              style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            Image.asset(
-              kLogo,
-              width: 60,
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            const Text(
-              kAppName,
-              style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
-        ),
-      ),
+      appBar: appBar(),
       endDrawer: Drawer(
         child: ListView(
           children: const [

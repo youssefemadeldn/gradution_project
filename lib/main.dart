@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_application_1/Features/checkout/presentation/views/payment_details_view.dart';
 import 'package:flutter_application_1/views/form_for_upload_student_data_view.dart';
-import 'package:flutter_application_1/views/login_view.dart';
+import 'package:flutter_application_1/views/a_login_view.dart';
 
 void main() {
   runApp(const CheckOutApp());
