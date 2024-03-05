@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant.dart';
 
-AppBar appBar() {
+AppBar CustomAppBar() {
   return AppBar(
     backgroundColor: kPrimaryColor,
     automaticallyImplyLeading: false,

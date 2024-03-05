@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant.dart';
-import 'package:flutter_application_1/widgets/main_appBar.dart';
+import 'package:flutter_application_1/widgets/custom_appBar.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20FormForUploadStudentData%20view/body_of_form.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20FormForUploadStudentData%20view/botoom_of_form.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20FormForUploadStudentData%20view/top_of_form.dart';
@@ -12,7 +12,7 @@ class FormForUploadStudentData extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar(),
+      appBar: CustomAppBar(),
       endDrawer: Drawer(
         child: ListView(
           children: const [

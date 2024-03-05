@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant.dart';
 import 'package:flutter_application_1/core/widgets/custom_button.dart';
+import 'package:flutter_application_1/views/b_home_view.dart';
 import 'package:flutter_application_1/views/form_for_upload_student_data_view.dart';
 import 'package:flutter_application_1/widgets/custom_text_form_field.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
@@ -89,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 CustomButton(
                   onTap: () {
-                    Navigator.pushNamed(context, FormForUploadStudentData.id);
+                    Navigator.pushNamed(context, HomeView.id);
                   },
                   //() async {
                   //   if (formKey.currentState!.validate()) {
