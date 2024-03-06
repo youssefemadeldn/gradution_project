@@ -70,7 +70,11 @@ class HomeView extends StatelessWidget {
             indent: 217,
             endIndent: 28,
           ),
-          const SmartServiceCard(),
+          const SmartServiceCard(
+            image: 'assets/images/1.png',
+            title: '''    الإعلانات ومواعيد
+           السمينارات          ''',
+          ),
         ],
       ),
     );

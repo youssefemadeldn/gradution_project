@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
 class SmartServiceCard extends StatelessWidget {
+  final String image;
+  final String title;
   const SmartServiceCard({
     super.key,
+    required this.image,
+    required this.title,
   });
 
   @override
@@ -20,14 +24,13 @@ class SmartServiceCard extends StatelessWidget {
               CircleAvatar(
                 radius: 50,
                 child: Image.asset(
-                  'assets/images/1.png',
+                  image,
                   height: 99,
                 ),
               ),
-              const Text(
-                '''    الإعلانات ومواعيد
-           السمينارات          ''',
-                style: TextStyle(
+              Text(
+                title,
+                style: const TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w900,
                     fontSize: 15),
