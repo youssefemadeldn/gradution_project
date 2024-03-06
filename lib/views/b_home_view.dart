@@ -51,20 +51,23 @@ class HomeView extends StatelessWidget {
               ),
             ),
           ),
-          const Text(
-            'الخدمات الذكية',
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 30,
-              fontWeight: FontWeight.w900,
+          const Align(
+            alignment: Alignment(.8, 0),
+            child: Text(
+              'الخدمات الذكية',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 30,
+                fontWeight: FontWeight.w900,
+              ),
             ),
           ),
           const Divider(
-            height: 30,
-            thickness: 20,
+            height: 7,
+            thickness: 10,
             color: kPrimaryColor,
-            indent: 60,
-            endIndent: 60,
+            indent: 217,
+            endIndent: 28,
           ),
         ],
       ),
