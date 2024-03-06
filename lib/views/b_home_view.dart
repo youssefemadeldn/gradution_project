@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/constant.dart';
 import 'package:flutter_application_1/widgets/custom_appBar.dart';
 
 class HomeView extends StatelessWidget {
@@ -10,52 +11,60 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      body: Stack(
-        clipBehavior: Clip.none,
+      body: Column(
         children: [
-          const Positioned(
-            top: 210,
-            // bottom: 150,
-            right: 8,
-            child: Text(
-              'الخدمات الذكية',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 30,
-                fontWeight: FontWeight.w900,
+          Container(
+            width: double.infinity,
+            height: 190,
+            decoration: const BoxDecoration(
+              color: Colors.black,
+              image: DecorationImage(
+                image: AssetImage('assets/images/background-gradute1.png'),
+                fit: BoxFit.fill,
               ),
             ),
-          ),
-          Image.asset(
-            'assets/images/background-gradute1.png',
-          ),
-          const Positioned(
-            // top: 0,
-            bottom: 110,
-            right: 5,
-            child: Text(
-              'الدراسات العليا',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          const Positioned(
-            top: 80,
-            // bottom: 150,
-            right: 5,
-            child: Text(
-              '''كل مايحتاجه الطالب من مدخل واحد: تسجيل المقررات، دفع المصروفات
+            child: const Align(
+              alignment: Alignment(1, -.8),
+              child: Column(
+                children: [
+                  Text(
+                    '''
+
+                        الدراسات العليا''',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    '''كل مايحتاجه الطالب من مدخل واحد: تسجيل المقررات، دفع المصروفات   
   منصة التعليم الإلكترونى، الجداول الدراسية، جداول الامتحانات، النتائج
                ''',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 13,
-                fontWeight: FontWeight.w900,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                ],
               ),
             ),
+          ),
+          const Text(
+            'الخدمات الذكية',
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 30,
+              fontWeight: FontWeight.w900,
+            ),
+          ),
+          const Divider(
+            height: 30,
+            thickness: 20,
+            color: kPrimaryColor,
+            indent: 60,
+            endIndent: 60,
           ),
         ],
       ),
