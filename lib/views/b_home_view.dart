@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant.dart';
 import 'package:flutter_application_1/widgets/custom_appBar.dart';
-
+import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/Smart_service_card_widget.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/list_view_of_smart_service_card.dart';
 
 class HomeView extends StatelessWidget {
@@ -71,18 +71,7 @@ class HomeView extends StatelessWidget {
             indent: 217,
             endIndent: 28,
           ),
-          const Row(
-            // after smart services
-            children: [
-              Expanded(
-                child: SizedBox(
-                  height: 170,
-                  // width: 200,
-                  child: ListViewOfSmartServiceCard(),
-                ),
-              ),
-            ],
-          ),
+          const ListViewOfSmartServiceCard(),
         ],
       ),
     );
