@@ -12,7 +12,7 @@ class SmartServiceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 130),
+      padding: const EdgeInsets.all(8.0),
       child: PhysicalModel(
         elevation: 10,
         shape: BoxShape.rectangle,
@@ -28,12 +28,15 @@ class SmartServiceCard extends StatelessWidget {
                   height: 99,
                 ),
               ),
-              Text(
-                title,
-                style: const TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.w900,
-                    fontSize: 15),
+              Padding(
+                padding: const EdgeInsets.only(right: 6, left: 6, top: 8),
+                child: Text(
+                  title,
+                  style: const TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 15),
+                ),
               ),
             ],
           ),
