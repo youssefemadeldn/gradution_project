@@ -27,8 +27,7 @@ class ListViewOfSmartServiceCard extends StatelessWidget {
                 ),
                 SmartServiceCard(
                   image: 'assets/images/2.png',
-                  title: '''            تسجيل نقطة بحث
-          (رفع الفكرة)          ''',
+                  title: 'تسجيل نقطة بحث',
                 ),
                 SmartServiceCard(
                   image: 'assets/images/3.png',

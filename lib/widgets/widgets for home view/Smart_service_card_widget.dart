@@ -15,30 +15,32 @@ class SmartServiceCard extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: PhysicalModel(
         elevation: 10,
+        borderRadius: const BorderRadius.all(Radius.elliptical(25, 25)),
         shape: BoxShape.rectangle,
         // shadowColor: Colors.grey,
         color: Colors.white,
         child: Center(
-          child: Column(
-            children: [
-              CircleAvatar(
-                radius: 50,
-                child: Image.asset(
+          child: SizedBox(
+            width: 200,
+            // height: 300,
+            child: Column(
+              children: [
+                Image.asset(
                   image,
                   height: 99,
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(right: 6, left: 6, top: 8),
-                child: Text(
-                  title,
-                  style: const TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w900,
-                      fontSize: 15),
+                Padding(
+                  padding: const EdgeInsets.only(right: 6, left: 6, top: 8),
+                  child: Text(
+                    title,
+                    style: const TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w900,
+                        fontSize: 15),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
