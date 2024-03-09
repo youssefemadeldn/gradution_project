@@ -3,6 +3,7 @@ import 'package:flutter_application_1/constant.dart';
 import 'package:flutter_application_1/widgets/custom_appBar.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/Smart_service_card_widget.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/list_view_of_smart_service_card.dart';
+import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/text_divider.dart';
 
 class HomeView extends StatelessWidget {
   static String id = 'HomeView';
@@ -53,25 +54,17 @@ class HomeView extends StatelessWidget {
               ),
             ),
           ),
-          const Align(
-            alignment: Alignment(.8, 0),
-            child: Text(
-              'الخدمات الذكية',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 30,
-                fontWeight: FontWeight.w900,
-              ),
-            ),
-          ),
-          const Divider(
-            height: 7,
-            thickness: 10,
-            color: kPrimaryColor,
-            indent: 217,
-            endIndent: 28,
+          const TextDivider(
+            text: 'الخدمات الذكية',
+            indent: 235,
+            endIndent: 10,
           ),
           const ListViewOfSmartServiceCard(),
+          const TextDivider(
+            text: 'البرامج الأكاديمية',
+            indent: 215,
+            endIndent: 10,
+          ),
         ],
       ),
     );
