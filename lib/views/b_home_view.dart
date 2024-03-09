@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant.dart';
 import 'package:flutter_application_1/widgets/custom_appBar.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/Smart_service_card_widget.dart';
+import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/list_view_of_academic_programs.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/list_view_of_smart_service_card.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/text_divider.dart';
 
@@ -65,6 +66,7 @@ class HomeView extends StatelessWidget {
             indent: 215,
             endIndent: 10,
           ),
+          const ListViewOfAcademicPrograms(),
         ],
       ),
     );
