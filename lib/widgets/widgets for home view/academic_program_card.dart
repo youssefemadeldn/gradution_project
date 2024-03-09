@@ -15,27 +15,31 @@ class AcademicProgramCard extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: PhysicalModel(
         elevation: 10,
+        borderRadius: const BorderRadius.all(Radius.elliptical(10, 10)),
         shape: BoxShape.rectangle,
         // shadowColor: Colors.grey,
         color: Colors.white,
         child: Center(
-          child: Column(
-            children: [
-              Image.asset(
-                image,
-                height: 99,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(right: 6, left: 6, top: 8),
-                child: Text(
-                  title,
-                  style: const TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w900,
-                      fontSize: 15),
+          child: SizedBox(
+            // width: 200,
+            child: Column(
+              children: [
+                Image.asset(
+                  image,
+                  height: 140,
                 ),
-              ),
-            ],
+                Padding(
+                  padding: const EdgeInsets.only(right: 6, left: 6, top: 8),
+                  child: Text(
+                    title,
+                    style: const TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w900,
+                        fontSize: 15),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

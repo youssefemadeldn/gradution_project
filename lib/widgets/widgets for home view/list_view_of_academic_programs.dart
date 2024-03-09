@@ -12,7 +12,7 @@ class ListViewOfAcademicPrograms extends StatelessWidget {
       children: [
         Expanded(
           child: SizedBox(
-            height: 150,
+            height: 190,
             // width: 200,
             child: ListView(
               scrollDirection: Axis.horizontal,
