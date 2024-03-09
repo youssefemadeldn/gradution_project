@@ -14,7 +14,7 @@ class AcademicProgramCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: PhysicalModel(
-        elevation: 10,
+        elevation: 4,
         borderRadius: const BorderRadius.all(Radius.elliptical(10, 10)),
         shape: BoxShape.rectangle,
         // shadowColor: Colors.grey,

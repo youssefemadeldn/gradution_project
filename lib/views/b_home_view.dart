@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/constant.dart';
 import 'package:flutter_application_1/widgets/custom_appBar.dart';
-import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/Smart_service_card_widget.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/list_view_of_academic_programs.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/list_view_of_smart_service_card.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/text_divider.dart';
@@ -55,18 +53,31 @@ class HomeView extends StatelessWidget {
               ),
             ),
           ),
-          const TextDivider(
-            text: 'الخدمات الذكية',
-            indent: 235,
-            endIndent: 10,
+          const SizedBox(
+            height: 20,
           ),
-          const ListViewOfSmartServiceCard(),
-          const TextDivider(
-            text: 'البرامج الأكاديمية',
-            indent: 215,
-            endIndent: 10,
-          ),
-          const ListViewOfAcademicPrograms(),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8),
+            child: Column(
+              children: [
+                TextDivider(
+                  text: 'الخدمات الذكية',
+                  indent: 220,
+                  endIndent: 9,
+                ),
+                ListViewOfSmartServiceCard(),
+                SizedBox(
+                  height: 20,
+                ),
+                TextDivider(
+                  text: 'البرامج الأكاديمية',
+                  indent: 195,
+                  endIndent: 7,
+                ),
+                ListViewOfAcademicPrograms(),
+              ],
+            ),
+          )
         ],
       ),
     );
