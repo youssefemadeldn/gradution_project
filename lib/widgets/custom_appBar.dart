@@ -7,12 +7,18 @@ AppBar CustomAppBar() {
     automaticallyImplyLeading: false,
     title: Row(
       children: [
+        const SizedBox(
+          width: 13,
+        ),
         const Text(
           'جامعة بنها',
           style: TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.bold,
           ),
+        ),
+        const SizedBox(
+          width: 10,
         ),
         const SizedBox(
           width: 10,
