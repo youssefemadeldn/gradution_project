@@ -20,46 +20,56 @@ class ListViewOfSmartServiceCard extends StatelessWidget {
               // reverse: true,
               // physics: NeverScrollableScrollPhysics(),
               cacheExtent: 100.0,
-              children: const [
+              children: [
                 SmartServiceCard(
                   image: 'assets/images/1.png',
                   title: 'الإعلانات ومواعيد السمينارات',
+                  onTap: () {},
                 ),
                 SmartServiceCard(
                   image: 'assets/images/2.png',
                   title: 'تسجيل نقطة بحث',
+                  onTap: () {},
                 ),
                 SmartServiceCard(
                   image: 'assets/images/3.png',
                   title: '''تسجيل واختيار المواد''',
+                  onTap: () {},
                 ),
                 SmartServiceCard(
                   image: 'assets/images/4.png',
                   title: 'التقدم للدراسات العليا',
+                  onTap: () {},
                 ),
                 SmartServiceCard(
                   image: 'assets/images/5.png',
                   title: 'الدفع الإلكتروني',
+                  onTap: () {},
                 ),
                 SmartServiceCard(
                   image: 'assets/images/6.png',
                   title: 'جداول الدراسة',
+                  onTap: () {},
                 ),
                 SmartServiceCard(
                   image: 'assets/images/7.png',
                   title: 'جداول الامتحانات',
+                  onTap: () {},
                 ),
                 SmartServiceCard(
                   image: 'assets/images/8.png',
                   title: 'نتائج الدراسات العليا',
+                  onTap: () {},
                 ),
                 SmartServiceCard(
                   image: 'assets/images/9.png',
                   title: 'chatbot',
+                  onTap: () {},
                 ),
                 SmartServiceCard(
                   image: 'assets/images/10.png',
                   title: 'الاشعارات ومتابعة الطلاب',
+                  onTap: () {},
                 ),
               ],
             ),
