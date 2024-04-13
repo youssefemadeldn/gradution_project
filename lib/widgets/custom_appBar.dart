@@ -19,7 +19,7 @@ AppBar CustomAppBar() {
         ),
         Image.asset(
           kLogo,
-          width: 60,
+          width: 100,
         ),
         const SizedBox(
           width: 10,
