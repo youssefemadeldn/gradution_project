@@ -33,7 +33,7 @@ AppBar CustomAppBar() {
         const Text(
           kAppName,
           style: TextStyle(
-            fontSize: 25,
+            fontSize: 21,
             fontWeight: FontWeight.bold,
           ),
         ),
