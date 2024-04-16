@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/views/Smart%20Service%20Views/register_matrials_view.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/Smart_service_card_widget.dart';
 
 class ListViewOfSmartServiceCard extends StatelessWidget {
@@ -34,7 +35,9 @@ class ListViewOfSmartServiceCard extends StatelessWidget {
                 SmartServiceCard(
                   image: 'assets/images/3.png',
                   title: '''تسجيل واختيار المواد''',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, RegisterMartialsView.id);
+                  },
                 ),
                 SmartServiceCard(
                   image: 'assets/images/4.png',

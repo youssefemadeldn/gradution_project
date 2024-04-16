@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_application_1/Features/checkout/presentation/views/payment_details_view.dart';
+import 'package:flutter_application_1/views/Smart%20Service%20Views/register_matrials_view.dart';
 import 'package:flutter_application_1/views/b_home_view.dart';
 import 'package:flutter_application_1/views/form_for_upload_student_data_view.dart';
 import 'package:flutter_application_1/views/a_login_view.dart';
@@ -16,13 +17,14 @@ class CheckOutApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      initialRoute: LoginPage.id,
       routes: {
         PaymentDetailsView.id: (context) => PaymentDetailsView(),
         LoginPage.id: (context) => LoginPage(),
         HomeView.id: (context) => HomeView(),
+        RegisterMartialsView.id: (context) => RegisterMartialsView(),
         FormForUploadStudentData.id: (context) => FormForUploadStudentData(),
       },
-      initialRoute: LoginPage.id,
     );
   }
 }
