@@ -23,6 +23,7 @@ class PaymentMethodBottomSheet extends StatelessWidget {
           CustomButton(
             text: 'Continue',
             color: kPrimaryColor,
+            width: double.infinity,
           ),
         ],
       ),

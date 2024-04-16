@@ -12,15 +12,28 @@ class RegisterMartialsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      body: const Column(
+      body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
-          DataTable2(),
-          CustomButton(
-            text: 'Submit',
-            color: kPrimaryColor,
+          const DataTable2(),
+          const SizedBox(
+            height: 15,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              CustomButton(
+                onTap: () {},
+                text: 'Submit',
+                color: kPrimaryColor,
+                width: 100,
+              ),
+              const SizedBox(
+                width: 5,
+              ),
+            ],
           ),
         ],
       ),

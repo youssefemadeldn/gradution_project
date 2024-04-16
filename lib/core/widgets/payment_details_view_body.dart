@@ -54,6 +54,7 @@ class _PaymentDetailsViewBodyState extends State<PaymentDetailsViewBody> {
               },
               text: 'Pay',
               color: kPrimaryColor,
+              width: double.infinity,
             ),
           ),
         ),
