@@ -75,6 +75,7 @@ class MyCartView extends StatelessWidget {
                     });
               },
               color: kPrimaryColor,
+              width: double.infinity,
             ),
             const SizedBox(
               height: 20,
