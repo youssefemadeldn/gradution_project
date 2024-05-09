@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/views/Smart%20Service%20Views/books_and_resource_materials.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/postgraduate_results_view.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/register_matrials_view.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/Smart_service_card_widget.dart';
@@ -44,6 +45,14 @@ class ListViewOfSmartServiceCard extends StatelessWidget {
                   image: 'assets/images/4.png',
                   title: 'التقدم للدراسات العليا',
                   onTap: () {},
+                ),
+                SmartServiceCard(
+                  image: 'assets/images/4.png',
+                  title: 'الكتب و مصارد المواد',
+                  onTap: () {
+                    Navigator.pushNamed(
+                        context, BooksAndResourceMaterialsView.id);
+                  },
                 ),
                 SmartServiceCard(
                   image: 'assets/images/5.png',

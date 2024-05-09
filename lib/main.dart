@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_application_1/Features/checkout/presentation/views/payment_details_view.dart';
+import 'package:flutter_application_1/views/Smart%20Service%20Views/books_and_resource_materials.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/postgraduate_results_view.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/register_matrials_view.dart';
 import 'package:flutter_application_1/views/b_home_view.dart';
@@ -25,6 +26,8 @@ class CheckOutApp extends StatelessWidget {
         HomeView.id: (context) => HomeView(),
         RegisterMartialsView.id: (context) => RegisterMartialsView(),
         PostgraduateResultsView.id: (context) => PostgraduateResultsView(),
+        BooksAndResourceMaterialsView.id: (context) =>
+            BooksAndResourceMaterialsView(),
         FormForUploadStudentData.id: (context) => FormForUploadStudentData(),
       },
     );
