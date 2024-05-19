@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/books_and_resource_materials.dart';
+import 'package:flutter_application_1/views/Smart%20Service%20Views/exams_schedule_view.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/postgraduate_results_view.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/register_matrials_view.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/Smart_service_card_widget.dart';
@@ -43,11 +44,6 @@ class ListViewOfSmartServiceCard extends StatelessWidget {
                 ),
                 SmartServiceCard(
                   image: 'assets/images/4.png',
-                  title: 'التقدم للدراسات العليا',
-                  onTap: () {},
-                ),
-                SmartServiceCard(
-                  image: 'assets/images/4.png',
                   title: 'الكتب و مصارد المواد',
                   onTap: () {
                     Navigator.pushNamed(
@@ -67,7 +63,9 @@ class ListViewOfSmartServiceCard extends StatelessWidget {
                 SmartServiceCard(
                   image: 'assets/images/7.png',
                   title: 'جداول الامتحانات',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, ExamsScheduleView.id);
+                  },
                 ),
                 SmartServiceCard(
                   image: 'assets/images/8.png',

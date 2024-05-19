@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_application_1/Features/checkout/presentation/views/payment_details_view.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/books_and_resource_materials.dart';
+import 'package:flutter_application_1/views/Smart%20Service%20Views/exams_schedule_view.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/postgraduate_results_view.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/register_matrials_view.dart';
 import 'package:flutter_application_1/views/b_home_view.dart';
@@ -24,11 +25,13 @@ class CheckOutApp extends StatelessWidget {
         PaymentDetailsView.id: (context) => PaymentDetailsView(),
         LoginPage.id: (context) => LoginPage(),
         HomeView.id: (context) => HomeView(),
+        FormForUploadStudentData.id: (context) => FormForUploadStudentData(),
+        //
         RegisterMartialsView.id: (context) => RegisterMartialsView(),
         PostgraduateResultsView.id: (context) => PostgraduateResultsView(),
         BooksAndResourceMaterialsView.id: (context) =>
             BooksAndResourceMaterialsView(),
-        FormForUploadStudentData.id: (context) => FormForUploadStudentData(),
+        ExamsScheduleView.id: (context) => ExamsScheduleView(),
       },
     );
   }
