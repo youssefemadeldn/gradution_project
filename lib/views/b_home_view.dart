@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/views/custom_drawer.dart';
+import 'package:flutter_application_1/views/custom_navigation_bar.dart';
 
 import 'package:flutter_application_1/widgets/custom_appBar.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/cover.dart';
@@ -16,37 +18,8 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      bottomNavigationBar: NavigationBar(
-        animationDuration: const Duration(milliseconds: 1000),
-        // backgroundColor: Colors.white,
-        destinations: const [
-          NavigationDestination(
-              icon: Icon(
-                Icons.home,
-                size: 30,
-              ),
-              label: 'Home'),
-          NavigationDestination(
-              icon: Icon(
-                Icons.person,
-                size: 30,
-              ),
-              label: 'Profile'),
-          NavigationDestination(
-              icon: Icon(
-                Icons.notifications,
-                size: 30,
-              ),
-              label: 'Notification'),
-          NavigationDestination(
-              icon: Icon(
-                Icons.settings,
-                size: 30,
-              ),
-              label: 'Setting'),
-        ],
-        selectedIndex: intId,
-      ),
+      drawer: const CustomDrawer(),
+      bottomNavigationBar: CustomNavigationBar(intId: intId),
       body: SingleChildScrollView(
         child: Column(
           children: [
