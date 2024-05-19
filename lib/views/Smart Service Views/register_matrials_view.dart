@@ -26,7 +26,7 @@ class RegisterMartialsView extends StatelessWidget {
             children: [
               CustomButton(
                 onTap: () {},
-                text: 'Submit',
+                text: 'تسجيل',
                 color: kPrimaryColor,
                 width: 100,
               ),

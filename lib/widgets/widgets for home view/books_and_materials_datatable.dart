@@ -42,7 +42,7 @@ class _PostgraduateDataTableState
               label: Text('المصادر '),
             ),
           ],
-          rows: [
+          rows: const [
             DataRow(
               selected: false,
               cells: [
@@ -107,10 +107,6 @@ class _PostgraduateDataTableState
                     text: 'تنزيل',
                     color: kPrimaryColor,
                     width: 60,
-                    onTap: () {
-                      downloadFile();
-                      print('done');
-                    },
                   ),
                 )),
               ],
