@@ -1,4 +1,9 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/constant.dart';
+import 'package:flutter_application_1/core/widgets/custom_button.dart';
+import 'package:http/http.dart';
 
 class BooksAndResourceMaterialsDataTable extends StatefulWidget {
   const BooksAndResourceMaterialsDataTable({super.key});
@@ -34,17 +39,21 @@ class _PostgraduateDataTableState
               label: Text('اسم المادة'),
             ),
             DataColumn(
-              label: Text('الدرجة '),
+              label: Text('المصادر '),
             ),
           ],
-          rows: const [
+          rows: [
             DataRow(
               selected: false,
               cells: [
                 DataCell(Text('1')),
                 DataCell(Text('SC2X')),
                 DataCell(Text('IOT')),
-                DataCell(Text('100')),
+                DataCell(SizedBox(
+                  height: 40,
+                  child: CustomButton(
+                      text: 'تنزيل', color: kPrimaryColor, width: 60),
+                )),
               ],
             ),
             DataRow(
@@ -53,7 +62,11 @@ class _PostgraduateDataTableState
                 DataCell(Text('2')),
                 DataCell(Text('SC2X')),
                 DataCell(Text('IOT')),
-                DataCell(Text('100')),
+                DataCell(SizedBox(
+                  height: 40,
+                  child: CustomButton(
+                      text: 'تنزيل', color: kPrimaryColor, width: 60),
+                )),
               ],
             ),
             DataRow(
@@ -62,7 +75,11 @@ class _PostgraduateDataTableState
                 DataCell(Text('3')),
                 DataCell(Text('SC2X')),
                 DataCell(Text('IOT')),
-                DataCell(Text('100')),
+                DataCell(SizedBox(
+                  height: 40,
+                  child: CustomButton(
+                      text: 'تنزيل', color: kPrimaryColor, width: 60),
+                )),
               ],
             ),
             DataRow(
@@ -71,7 +88,11 @@ class _PostgraduateDataTableState
                 DataCell(Text('4')),
                 DataCell(Text('SC2X')),
                 DataCell(Text('IOT')),
-                DataCell(Text('100')),
+                DataCell(SizedBox(
+                  height: 40,
+                  child: CustomButton(
+                      text: 'تنزيل', color: kPrimaryColor, width: 60),
+                )),
               ],
             ),
             DataRow(
@@ -80,12 +101,31 @@ class _PostgraduateDataTableState
                 DataCell(Text('5')),
                 DataCell(Text('SC2X')),
                 DataCell(Text('IOT')),
-                DataCell(Text('100')),
+                DataCell(SizedBox(
+                  height: 40,
+                  child: CustomButton(
+                    text: 'تنزيل',
+                    color: kPrimaryColor,
+                    width: 60,
+                    onTap: () {
+                      downloadFile();
+                      print('done');
+                    },
+                  ),
+                )),
               ],
             ),
           ],
         ),
       ),
     );
+  }
+
+  void downloadFile() async {
+    var time = DateTime.now().microsecondsSinceEpoch;
+    var path = '/storage/emulated/0/Download/image-$time.jpg';
+    var file = File(path);
+    var res = await get(Uri.parse('https://source.unsplash.com/random'));
+    file.writeAsBytes(res.bodyBytes);
   }
 }
