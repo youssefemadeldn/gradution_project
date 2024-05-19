@@ -8,6 +8,7 @@ import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/text_d
 
 class HomeView extends StatelessWidget {
   static String id = 'HomeView';
+  static int intId = 0;
 
   const HomeView({super.key});
 
@@ -15,6 +16,18 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
+      bottomNavigationBar: NavigationBar(
+        animationDuration: const Duration(milliseconds: 1000),
+        // backgroundColor: Colors.white,
+        destinations: const [
+          NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+          NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
+          NavigationDestination(
+              icon: Icon(Icons.settings_accessibility_rounded),
+              label: 'Setting'),
+        ],
+        selectedIndex: intId,
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
