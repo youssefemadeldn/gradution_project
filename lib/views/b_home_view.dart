@@ -20,10 +20,29 @@ class HomeView extends StatelessWidget {
         animationDuration: const Duration(milliseconds: 1000),
         // backgroundColor: Colors.white,
         destinations: const [
-          NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-          NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
           NavigationDestination(
-              icon: Icon(Icons.settings_accessibility_rounded),
+              icon: Icon(
+                Icons.home,
+                size: 30,
+              ),
+              label: 'Home'),
+          NavigationDestination(
+              icon: Icon(
+                Icons.person,
+                size: 30,
+              ),
+              label: 'Profile'),
+          NavigationDestination(
+              icon: Icon(
+                Icons.notifications,
+                size: 30,
+              ),
+              label: 'Notification'),
+          NavigationDestination(
+              icon: Icon(
+                Icons.settings,
+                size: 30,
+              ),
               label: 'Setting'),
         ],
         selectedIndex: intId,

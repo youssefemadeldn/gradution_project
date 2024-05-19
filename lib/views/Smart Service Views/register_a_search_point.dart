@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/custom_appBar.dart';
 
-class ExamsScheduleView extends StatelessWidget {
-  static String id = 'ExamsScheduleView';
-  const ExamsScheduleView({super.key});
+class RegisterASearchPoint extends StatelessWidget {
+  static String id = 'RegisterASearchPoint';
+  const RegisterASearchPoint({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      body: const Center(child: Text('Pending...')),
+      body: const Center(child: Text("Pending....")),
     );
   }
 }
