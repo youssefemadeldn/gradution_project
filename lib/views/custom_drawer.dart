@@ -34,7 +34,7 @@ class CustomDrawer extends StatelessWidget {
               style: TextStyle(fontSize: 24.0),
             ),
             onTap: () {
-              Navigator.pushReplacement(
+              Navigator.pop(
                 context,
                 MaterialPageRoute<void>(
                   builder: (BuildContext context) => const HomeView(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/views/custom_drawer.dart';
-import 'package:flutter_application_1/views/custom_navigation_bar.dart';
 
 import 'package:flutter_application_1/widgets/custom_appBar.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/cover.dart';
@@ -10,7 +9,6 @@ import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/text_d
 
 class HomeView extends StatelessWidget {
   static String id = 'HomeView';
-  static int intId = 0;
 
   const HomeView({super.key});
 
@@ -19,7 +17,7 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(),
       drawer: const CustomDrawer(),
-      bottomNavigationBar: CustomNavigationBar(intId: intId),
+      // bottomNavigationBar: CustomNavigationBar(intId: intId),
       body: SingleChildScrollView(
         child: Column(
           children: [

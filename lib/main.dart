@@ -9,6 +9,7 @@ import 'package:flutter_application_1/views/Smart%20Service%20Views/register_a_s
 import 'package:flutter_application_1/views/Smart%20Service%20Views/register_matrials_view.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/study_schedule.dart';
 import 'package:flutter_application_1/views/b_home_view.dart';
+import 'package:flutter_application_1/views/custom_navigation_bar.dart';
 import 'package:flutter_application_1/views/form_for_upload_student_data_view.dart';
 import 'package:flutter_application_1/views/a_login_view.dart';
 
@@ -23,6 +24,7 @@ class CheckOutApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      home: MyNavigationBar(),
       initialRoute: LoginPage.id,
       routes: {
         PaymentDetailsView.id: (context) => PaymentDetailsView(),
@@ -39,6 +41,7 @@ class CheckOutApp extends StatelessWidget {
         AnnouncementsAndSeminarDates.id: (context) =>
             AnnouncementsAndSeminarDates(),
         StudySchedule.id: (context) => StudySchedule(),
+        MyNavigationBar.id: (context) => MyNavigationBar(),
       },
     );
   }
@@ -47,3 +50,43 @@ class CheckOutApp extends StatelessWidget {
 // 7. Create account => https://dashboard.stripe.com/register
 
 // 1- create payment intent (amount , currency)
+class MyNavigationBar extends StatefulWidget {
+  static String id = 'MyNavigationBar';
+  MyNavigationBar({Key? key}) : super(key: key);
+
+  @override
+  _MyNavigationBarState createState() => _MyNavigationBarState();
+}
+
+class _MyNavigationBarState extends State<MyNavigationBar> {
+  int selectedIndex = 0;
+
+  static const List<Widget> listOfViews = <Widget>[
+    HomeView(),
+    Text('Profile Page',
+        style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
+    Text('Notification Page',
+        style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
+    Text('Setting Page',
+        style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
+  ];
+
+  void onItemTapped(int index) {
+    setState(() {
+      selectedIndex = index;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: listOfViews.elementAt(selectedIndex),
+      ),
+      bottomNavigationBar: CustomNavigationBar(
+        intId: selectedIndex,
+        onItemTapped: onItemTapped,
+      ),
+    );
+  }
+}
