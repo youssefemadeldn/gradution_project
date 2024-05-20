@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/study_schedule.dart';
+import 'package:flutter_application_1/views/b_home_view.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({
@@ -15,7 +16,7 @@ class CustomDrawer extends StatelessWidget {
           const UserAccountsDrawerHeader(
             currentAccountPicture: CircleAvatar(
               backgroundImage: NetworkImage(
-                  'https://images.unsplash.com/photo-1485290334039-a3c69043e517?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYyOTU3NDE0MQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300'),
+                  'https://blog.photofeeler.com/wp-content/uploads/2017/12/linkedin-profile-picture.jpg'),
             ),
             accountEmail: Text('jane.doe@example.com'),
             accountName: Text(
@@ -29,14 +30,14 @@ class CustomDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.house),
             title: const Text(
-              'Houses',
+              'Home',
               style: TextStyle(fontSize: 24.0),
             ),
             onTap: () {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute<void>(
-                  builder: (BuildContext context) => const StudySchedule(
+                  builder: (BuildContext context) => const HomeView(
                       // title: 'Houses',
                       ),
                 ),
