@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/study_schedule.dart';
 import 'package:flutter_application_1/views/b_home_view.dart';
@@ -15,7 +16,7 @@ class CustomDrawer extends StatelessWidget {
         children: [
           const UserAccountsDrawerHeader(
             currentAccountPicture: CircleAvatar(
-              backgroundImage: NetworkImage(
+              backgroundImage: CachedNetworkImageProvider(
                   'https://blog.photofeeler.com/wp-content/uploads/2017/12/linkedin-profile-picture.jpg'),
             ),
             accountEmail: Text('jane.doe@example.com'),
