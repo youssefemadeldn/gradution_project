@@ -41,6 +41,7 @@ dependencies:
   flutter_stripe: ^10.0.0
   modal_progress_hud_nsn: ^0.4.0
   http: ^1.1.0
+  flutter_native_splash: ^2.4.0
 
 dev_dependencies:
   flutter_test:
