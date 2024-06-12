@@ -1,9 +1,19 @@
+import 'dart:js_util';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant.dart';
 import 'package:flutter_application_1/core/widgets/custom_button.dart';
 import 'package:flutter_application_1/main.dart';
 import 'package:flutter_application_1/widgets/custom_text_form_field.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
+
+import 'dart:convert';
+
+import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
+
+// Assuming you're using some spinner for the loading state
+// Assuming you're using this for the loading overlay
 
 class LoginPage extends StatefulWidget {
   LoginPage({super.key});
@@ -15,10 +25,74 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   String? email, password;
-
+  String _errorMessage = '';
   bool isLoading = false;
-
   GlobalKey<FormState> formKey = GlobalKey();
+
+  Future<void> _login() async {
+    if (email != null &&
+        email!.isNotEmpty &&
+        password != null &&
+        password!.isNotEmpty) {
+      setState(() {
+        isLoading = true;
+      });
+
+      try {
+        final response = await http.post(
+          Uri.parse(
+              'https://2e4b-197-33-118-118.ngrok-free.app/api/auth/loginstudent'),
+          // 122144455610
+          headers: <String, String>{
+            'Content-Type': 'application/json; charset=UTF-8',
+          },
+          body: jsonEncode(<String, String>{
+            'account': email!,
+            'password': password!,
+          }),
+        );
+
+        // Print request and response for debugging
+        print('Request: ${jsonEncode(<String, String>{
+              'account': email!,
+              'password': password!
+            })}');
+        print('Response status: ${response.statusCode}');
+        print('Response body: ${response.body}');
+
+        if (response.statusCode == 200) {
+          var data = jsonDecode(response.body);
+          SharedPreferences prefs = await SharedPreferences.getInstance();
+          await prefs.setString('access_token', data['access_token']);
+          await prefs.setString('login_type', data['login_type']);
+
+          // Navigate to the next screen
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    MyNavigationBar()), // Assuming MyNavigationBar is your home screen
+          );
+        } else {
+          setState(() {
+            _errorMessage = 'Failed to login: ${response.body}';
+          });
+        }
+      } catch (e) {
+        setState(() {
+          _errorMessage = 'Failed to connect to the server';
+        });
+      } finally {
+        setState(() {
+          isLoading = false;
+        });
+      }
+    } else {
+      setState(() {
+        _errorMessage = 'Email and password cannot be empty';
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -88,39 +162,22 @@ class _LoginPageState extends State<LoginPage> {
                   height: 10,
                 ),
                 CustomButton(
-                  onTap: () {
-                    Navigator.pushNamed(context, MyNavigationBar.id);
-                  },
-                  //() async {
-                  //   if (formKey.currentState!.validate()) {
-                  //     isLoading = true;
-                  //     setState(() {});
-                  //     try {
-                  //       await signUser();
-                  //       Navigator.pushNamed(context, ChatPage.id,
-                  //           // to send email from login page to chat page \/
-                  //           arguments: email);
-                  //     } on FirebaseAuthException catch (e) {
-                  //       if (e.code == 'user-not-found') {
-                  //         showSnackBar(
-                  //             context, 'No user found for that email.');
-                  //       } else if (e.code == 'wrong-password') {
-                  //         showSnackBar(context,
-                  //             'Wrong password provided for that user.');
-                  //       }
-                  //     } catch (e) {
-                  //       showSnackBar(context,
-                  //           'Ooops there was an error, try again later');
-                  //     }
-                  //     isLoading = false;
-                  //     setState(() {});
-                  //   }
-                  // },
-                  text: 'LOGIN', color: Colors.white, width: double.infinity,
+                  onTap: _login,
+                  text: 'LOGIN',
+                  color: Colors.white,
+                  width: double.infinity,
                 ),
                 const SizedBox(
                   height: 10,
                 ),
+                if (_errorMessage.isNotEmpty)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20),
+                    child: Text(
+                      _errorMessage,
+                      style: const TextStyle(color: Colors.red),
+                    ),
+                  ),
               ],
             ),
           ),
@@ -128,10 +185,4 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
-
-  // Future<void> signUser() async {
-  //   FirebaseAuth auth = FirebaseAuth.instance;
-  //   UserCredential user = await auth.signInWithEmailAndPassword(
-  //       email: email!, password: password!);
-  // }
 }
