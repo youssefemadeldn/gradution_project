@@ -25,11 +25,11 @@ class CheckOutApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: MyNavigationBar(),
-      initialRoute: LoginPage.id,
+      initialRoute: PaymentDetailsView.id,
       routes: {
-        PaymentDetailsView.id: (context) => PaymentDetailsView(),
         LoginPage.id: (context) => LoginPage(),
         HomeView.id: (context) => HomeView(),
+        PaymentDetailsView.id: (context) => PaymentDetailsView(),
         RegisterMartialsView.id: (context) => RegisterMartialsView(),
         FormForUploadStudentData.id: (context) => FormForUploadStudentData(),
         //
