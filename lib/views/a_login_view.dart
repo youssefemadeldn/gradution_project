@@ -1,5 +1,3 @@
-import 'dart:js_util';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant.dart';
 import 'package:flutter_application_1/core/widgets/custom_button.dart';
@@ -30,68 +28,68 @@ class _LoginPageState extends State<LoginPage> {
   GlobalKey<FormState> formKey = GlobalKey();
 
   Future<void> _login() async {
-    if (email != null &&
-        email!.isNotEmpty &&
-        password != null &&
-        password!.isNotEmpty) {
-      setState(() {
-        isLoading = true;
-      });
+    // if (email != null &&
+    //     email!.isNotEmpty &&
+    //     password != null &&
+    //     password!.isNotEmpty) {
+    //   setState(() {
+    //     isLoading = true;
+    //   });
 
-      try {
-        final response = await http.post(
-          Uri.parse(
-              'https://2e4b-197-33-118-118.ngrok-free.app/api/auth/loginstudent'),
-          // 122144455610
-          headers: <String, String>{
-            'Content-Type': 'application/json; charset=UTF-8',
-          },
-          body: jsonEncode(<String, String>{
-            'account': email!,
-            'password': password!,
-          }),
-        );
+    //   try {
+    //     final response = await http.post(
+    //       Uri.parse(
+    //           'https://16d7-41-233-190-7.ngrok-free.app/api/auth/loginstudent'),
+    //       // 122144455610
+    //       headers: <String, String>{
+    //         'Content-Type': 'application/json; charset=UTF-8',
+    //       },
+    //       body: jsonEncode(<String, String>{
+    //         'account': email!,
+    //         'password': password!,
+    //       }),
+    //     );
 
-        // Print request and response for debugging
-        print('Request: ${jsonEncode(<String, String>{
-              'account': email!,
-              'password': password!
-            })}');
-        print('Response status: ${response.statusCode}');
-        print('Response body: ${response.body}');
+    //     // Print request and response for debugging
+    //     print('Request: ${jsonEncode(<String, String>{
+    //           'account': email!,
+    //           'password': password!
+    //         })}');
+    //     print('Response status: ${response.statusCode}');
+    //     print('Response body: ${response.body}');
 
-        if (response.statusCode == 200) {
-          var data = jsonDecode(response.body);
-          SharedPreferences prefs = await SharedPreferences.getInstance();
-          await prefs.setString('access_token', data['access_token']);
-          await prefs.setString('login_type', data['login_type']);
+    //     if (response.statusCode == 200) {
+    //       var data = jsonDecode(response.body);
+    //       SharedPreferences prefs = await SharedPreferences.getInstance();
+    //       await prefs.setString('access_token', data['access_token']);
+    //       await prefs.setString('login_type', data['login_type']);
 
-          // Navigate to the next screen
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-                builder: (context) =>
-                    MyNavigationBar()), // Assuming MyNavigationBar is your home screen
-          );
-        } else {
-          setState(() {
-            _errorMessage = 'Failed to login: ${response.body}';
-          });
-        }
-      } catch (e) {
-        setState(() {
-          _errorMessage = 'Failed to connect to the server';
-        });
-      } finally {
-        setState(() {
-          isLoading = false;
-        });
-      }
-    } else {
-      setState(() {
-        _errorMessage = 'Email and password cannot be empty';
-      });
-    }
+    // Navigate to the next screen
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+          builder: (context) =>
+              MyNavigationBar()), // Assuming MyNavigationBar is your home screen
+    );
+    //     } else {
+    //       setState(() {
+    //         _errorMessage = 'Failed to login: ${response.body}';
+    //       });
+    //     }
+    //   } catch (e) {
+    //     setState(() {
+    //       _errorMessage = 'Failed to connect to the server';
+    //     });
+    //   } finally {
+    //     setState(() {
+    //       isLoading = false;
+    //     });
+    //   }
+    // } else {
+    //   setState(() {
+    //     _errorMessage = 'Email and password cannot be empty';
+    //   });
+    // }
   }
 
   @override

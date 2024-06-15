@@ -15,8 +15,7 @@ class _MyNavigationBarViewState extends State<MyNavigationBarView> {
 
   static const List<Widget> listOfViews = <Widget>[
     HomeView(),
-    Text('Profile Page',
-        style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
+    ProfilePage(),
     Text('Notification Page',
         style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
     Text('Setting Page',
@@ -38,6 +37,61 @@ class _MyNavigationBarViewState extends State<MyNavigationBarView> {
       bottomNavigationBar: CustomNavigationBar(
         intId: selectedIndex,
         onItemTapped: onItemTapped,
+      ),
+    );
+  }
+}
+
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Profile Page'),
+      ),
+      body: const Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            CircleAvatar(
+              radius: 50,
+              backgroundImage: NetworkImage(
+                  'https://www.example.com/profile.jpg'), // Replace with a valid image URL
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Name: John Doe',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Age: 30',
+              style: TextStyle(fontSize: 18),
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Account: johndoe123',
+              style: TextStyle(fontSize: 18),
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Phone: +123456789',
+              style: TextStyle(fontSize: 18),
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Address: 123 Main Street, City, Country',
+              style: TextStyle(fontSize: 18),
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Degree: Bachelor of Science',
+              style: TextStyle(fontSize: 18),
+            ),
+          ],
+        ),
       ),
     );
   }
