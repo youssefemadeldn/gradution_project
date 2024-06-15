@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_application_1/Features/checkout/presentation/views/payment_details_view.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/announcements_and_seminar_dates.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/books_and_resource_materials.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/exams_schedule_view.dart';
@@ -25,11 +24,11 @@ class CheckOutApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: MyNavigationBar(),
-      initialRoute: PaymentDetailsView.id,
+      initialRoute: LoginPage.id,
       routes: {
         LoginPage.id: (context) => LoginPage(),
         HomeView.id: (context) => HomeView(),
-        PaymentDetailsView.id: (context) => PaymentDetailsView(),
+
         RegisterMartialsView.id: (context) => RegisterMartialsView(),
         FormForUploadStudentData.id: (context) => FormForUploadStudentData(),
         //
