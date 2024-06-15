@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant.dart';
-import 'package:flutter_application_1/core/widgets/custom_button.dart';
+import 'package:flutter_application_1/widgets/custom_button.dart';
 import 'package:flutter_application_1/widgets/custom_appBar.dart';
 import 'package:flutter_application_1/widgets/widgets%20for%20home%20view/data_table.dart';
 

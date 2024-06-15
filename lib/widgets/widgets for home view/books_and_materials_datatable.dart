@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant.dart';
-import 'package:flutter_application_1/core/widgets/custom_button.dart';
+import 'package:flutter_application_1/widgets/custom_button.dart';
 import 'package:http/http.dart';
 
 class BooksAndResourceMaterialsDataTable extends StatefulWidget {
