@@ -42,13 +42,13 @@ class _PostgraduateDataTableState
               label: Text('المصادر '),
             ),
           ],
-          rows: const [
+          rows: [
             DataRow(
               selected: false,
               cells: [
-                DataCell(Text('1')),
-                DataCell(Text('SC2X')),
-                DataCell(Text('IOT')),
+                const DataCell(Text('1')),
+                const DataCell(Text('SC2X')),
+                const DataCell(Text('IOT')),
                 DataCell(SizedBox(
                   height: 40,
                   child: CustomButton(
@@ -59,9 +59,9 @@ class _PostgraduateDataTableState
             DataRow(
               selected: false,
               cells: [
-                DataCell(Text('2')),
-                DataCell(Text('SC2X')),
-                DataCell(Text('IOT')),
+                const DataCell(Text('2')),
+                const DataCell(Text('SC2X')),
+                const DataCell(Text('IOT')),
                 DataCell(SizedBox(
                   height: 40,
                   child: CustomButton(
@@ -72,9 +72,9 @@ class _PostgraduateDataTableState
             DataRow(
               selected: false,
               cells: [
-                DataCell(Text('3')),
-                DataCell(Text('SC2X')),
-                DataCell(Text('IOT')),
+                const DataCell(Text('3')),
+                const DataCell(Text('SC2X')),
+                const DataCell(Text('IOT')),
                 DataCell(SizedBox(
                   height: 40,
                   child: CustomButton(
@@ -85,9 +85,9 @@ class _PostgraduateDataTableState
             DataRow(
               selected: false,
               cells: [
-                DataCell(Text('4')),
-                DataCell(Text('SC2X')),
-                DataCell(Text('IOT')),
+                const DataCell(Text('4')),
+                const DataCell(Text('SC2X')),
+                const DataCell(Text('IOT')),
                 DataCell(SizedBox(
                   height: 40,
                   child: CustomButton(
@@ -98,9 +98,9 @@ class _PostgraduateDataTableState
             DataRow(
               selected: false,
               cells: [
-                DataCell(Text('5')),
-                DataCell(Text('SC2X')),
-                DataCell(Text('IOT')),
+                const DataCell(Text('5')),
+                const DataCell(Text('SC2X')),
+                const DataCell(Text('IOT')),
                 DataCell(SizedBox(
                   height: 40,
                   child: CustomButton(

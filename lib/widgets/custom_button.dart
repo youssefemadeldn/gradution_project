@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_application_1/utils/styles.dart';
 
 class CustomButton extends StatelessWidget {
   final void Function()? onTap;
   final String text;
-  final Color color;
-  final double width;
-  const CustomButton({
+  final bool isLoading;
+  Color color;
+  double width;
+  CustomButton({
     super.key,
     this.onTap,
     required this.text,
-    required this.color,
-    required this.width,
+    this.isLoading = false,
+    this.color = Colors.white,
+    this.width = double.infinity,
   });
 
   @override
@@ -20,17 +23,19 @@ class CustomButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         height: 60,
-        width: width,
+        width: double.infinity,
         decoration: BoxDecoration(
-          color: color,
+          color: const Color(0xff34a853),
           borderRadius: BorderRadius.circular(15),
         ),
-        child: Center(
-          child: Text(
-            text,
-            style: Styles.style22,
-          ),
-        ),
+        child: isLoading
+            ? const Center(child: CircularProgressIndicator())
+            : Center(
+                child: Text(
+                  text,
+                  style: Styles.style22,
+                ),
+              ),
       ),
     );
   }
