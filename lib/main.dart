@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/announcements_and_seminar_dates.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/books_and_resource_materials.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/exams_schedule_view.dart';
+import 'package:flutter_application_1/views/Smart%20Service%20Views/paymnet_view.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/postgraduate_results_view.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/register_a_search_point.dart';
 import 'package:flutter_application_1/views/Smart%20Service%20Views/register_matrials_view.dart';
@@ -40,6 +41,7 @@ class CheckOutApp extends StatelessWidget {
         AnnouncementsAndSeminarDates.id: (context) =>
             AnnouncementsAndSeminarDates(),
         StudySchedule.id: (context) => StudySchedule(),
+        PaymentView.id: (context) => PaymentView(),
         MyNavigationBar.id: (context) => MyNavigationBar(),
       },
     );
